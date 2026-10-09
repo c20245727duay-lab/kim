@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
 </head>
 
+<body class="bg-pink-50 text-gray-800 dark:bg-slate-900 dark:text-white max-w-3xl mx-auto p-6 text-center">
 
-<body class="bg-pink-500 text-gray-800">
-   <header class="bg-mauve-500 text-black p-5">
-
-<footer class="bg-fuchsia-500 text-black text-center p-5">
-
-        <p>
-           Kimberly Duay
-        </p>
-        <p>
-          My Portfolio
-        </p>
+        <p> Kimberly Duay </p>
+    
     </footer>
 
     <p class="text-center mt-2">
-    
-    <button id="switch"
-        class="bg-black text-white px-6 py-3 rounded-[20px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
-        Switch
-    </button>
+        <button id="toggledark" type="button"
+            class="bg-black text-white px-6 py-3 rounded-[20px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
+            Toggle 
+        </button>
+    </p>
 
     <header>
         <nav class="flex justify-between items-center mx-[20px] max-sm:flex-col max-sm:gap-4">
             <span>c20245727.duay@csav.edu.ph</span>
-            <ul class="flex gap-5 p-0 m-0 list-none max-sm:flex-col max-sm:text-center">
+            <ul class="flex gap-5 list-none max-sm:flex-col max-sm:text-center">
                 <li><a class="transition-colors duration-500 hover:text-pink-400" href="#projects">Projects</a></li>
                 <li><a class="transition-colors duration-500 hover:text-pink-400" href="#services">Services</a></li>
                 <li><a class="transition-colors duration-500 hover:text-pink-400" href="#contact">Contact Me</a></li>
@@ -43,51 +38,53 @@
     <main class="flex flex-wrap gap-[20px] p-[20px] m-[20px] max-sm:p-3 max-sm:m-3 max-sm:gap-5">
 
         <section id="projects"
-            class="flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
-            <h2 class="text-black-500 max-md:text-5xl max-md:text-pink-600">My Projects</h2>
+            class="scroll-mt-24 flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
+            <h2 class="text-black max-md:text-5xl max-md:text-pink-600">My Projects</h2>
             <p>Personal portfolio, payroll system, company website, startup website, and compliance monitoring system.</p>
         </section>
 
         <section id="services"
-            class="flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
-            <h2 class="text-black-500 max-md:text-5xl max-md:text-black-600">My Services</h2>
+            class="scroll-mt-24 flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
+            <h2 class="text-black max-md:text-5xl">My Services</h2>
             <p>Website Creation, System Creation, AI Automation, Database Management, Project Management, Systems Analyst</p>
         </section>
 
         <section id="contact"
-            class="flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
-            <h2 class="text-black-500 max-md:text-5xl max-md:text-black-700">Let's build together!</h2>
+            class="scroll-mt-24 flex-1 min-w-[280px] border-2 border-white p-5 bg-pink-500 max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
+            <h2 class="text-black max-md:text-5xl">Let's build together!</h2>
             <form action="#" class="flex flex-col gap-5">
-               
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-             
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-               
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
 
-                <button type="submit"
-                    class="bg-black text-white px-6 py-3 rounded-[20px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required
+                    class="border border-black bg-white text-black px-2 py-1">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required
+                    class="border border-black bg-white text-black px-2 py-1">
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required
+                    class="border border-black bg-white text-black px-2 py-1"></textarea>
+
+                <button type="submit" class="bg-black text-white p-3 rounded-[20px] hover:bg-red-500">
                     Send Message
                 </button>
             </form>
         </section>
     </main>
-    
+
     <footer class="bg-fuchsia-500 text-black text-center p-5">
-
-        <p>
-             2026 Kimberly Duay
-        </p>
-
-        <p>
-            c20245727.duay@csav.edu.ph
-        </p>
-
+        <p>Kimberly Duay</p>
+        <p>My Portfolio</p>
     </footer>
 
-</body>
+    <script>
+        const tb = document.querySelector('#toggledark');
+        const html = document.querySelector('html');
 
+        tb.addEventListener('click', function () {
+            html.classList.toggle('dark');
+        });
+    </script>
+</body>
 </html>
